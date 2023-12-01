@@ -1,0 +1,12 @@
+# Exemplo de volume persistente / não esta sendo usado
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv1
+spec:
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce # mais usado, os pods tem acesso ao volume do mesmo node
+    - ReadWriteMany
+# Verificar a documentação / https://kubernetes.io/docs/concepts/storage/volumes/
