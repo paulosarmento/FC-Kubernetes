@@ -16,15 +16,15 @@ spec:
     spec:
       containers:
         - name: goserver
-          image: "paulosarmento/hello-go:v9.6"
+          image: "paulosarmento/hello-go:v10.5"
 
           resources:
             requests:
-              cpu: 100m
-              memory: 20Mi
+              cpu: "0.6"
+              memory: 50Mi
             limits:
-              cpu: 500m
-              memory: 25Mi
+              cpu: "1.0"
+              memory: 80Mi
 
           startupProbe:
             httpGet:
