@@ -21,3 +21,10 @@ spec:
               cpu: "500m"
           ports:
             - containerPort: 3000
+          volumeMounts:
+            - name: chave
+              mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      volumes:
+        - name: chave
+          secret:
+            secretName: chave
